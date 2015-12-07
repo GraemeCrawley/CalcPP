@@ -1,12 +1,12 @@
 /*
- * HWK6crawleg.h
+ * HWK6_crawleg.h
  *
  *  Created on: Nov 29, 2015
  *      Author: graeme
  */
 
-#ifndef HWK6CRAWLEG_H_
-#define HWK6CRAWLEG_H_
+#ifndef HWK6_CRAWLEG_H_
+#define HWK6_CRAWLEG_H_
 
 class HWK6_crawleg {
 public:
@@ -14,4 +14,4 @@ public:
 	virtual ~HWK6_crawleg();
 };
 
-#endif /* HWK6CRAWLEG_H_ */
+#endif /* HWK6_CRAWLEG_H_ */

@@ -1,11 +1,11 @@
 /*
- * HWK6crawleg.cpp
+ * HWK6_crawleg.cpp
  *
  *  Created on: Nov 29, 2015
  *      Author: graeme
  */
 
-#include "HWK6crawleg.h"
+#include "HWK6_crawleg.h"
 #include <iostream>
 #include <sstream>
 #include <string>
