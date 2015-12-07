@@ -6,11 +6,11 @@
  */
 
 #ifndef EXPRESSION_H_
-#define EXPRESSION_H_
+#define EXPRESSION_H_e
 
 class Expression {
-	virtual string evaluate();
-	virtual void print();
-};
+	virtual std::string evaluate();
+	virtual void ~print();
+	};
 
 #endif /* EXPRESSION_H_ */

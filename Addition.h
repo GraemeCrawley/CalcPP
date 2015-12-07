@@ -5,13 +5,12 @@
  *      Author: graeme
  */
 
-#ifndef ADD_H_
-#define ADD_H_
+#ifndef ADDITION_H_
+#define ADDITION_H_
 
-class Add : ArithmeticExpression{
+class Addition : ArithmeticExpression{
 public:
-	Add();
-	virtual ~Add();
+int n;
 };
 
-#endif /* ADD_H_ */
+#endif /* ADDITION_H_ */

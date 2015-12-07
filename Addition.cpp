@@ -1,18 +1,18 @@
 /*
- * Add.cpp
+ * Addition.cpp
  *
  *  Created on: Nov 29, 2015
  *      Author: graeme
  */
 
-#include "Add.h"
+#include "Addition.h"
 
-Add::Add() {
+Addition::Addition() {
 	// TODO Auto-generated constructor stub
 
 }
 
-Add::~Add() {
+Addition::~Addition() {
 	// TODO Auto-generated destructor stub
 }
 
