@@ -1,0 +1,131 @@
+class Expression {
+private:
+	string exp;
+public:
+	//Constructor
+	Expression(string s){
+		exp = s;
+	}
+	virtual string evaluate(); 							//evaluates expression entered
+		//add code to check if its correct
+		ArithmeticExpression n(exp);					//initializes an expression
+		string result = n.evaluate();					//gets result from evaluate function in ArrithmeticExpressionxpression()
+		return result;
+	virtual void print(){
+		//convert expression into simplified version 
+		//i.e. no extra brackets or spaces
+	}
+}
+
+class ArithmeticExpression {
+private:	
+	string n;											//holds the expression
+	//Expression left;									//holds the left expression
+	//Expression right;									//holds the right expression
+public:
+	//Constructor
+	ArithmeticExpression(string expression){
+		n = expression;
+	}
+	string evaluate(){
+	int bracketCount = 0;								//counts left and right brackets
+	if (n[0] = '('){									//removes outside brackets
+		for(int a = 1; a < (n.length() - 1); a++){
+			string temp[a-1] = n[a];		
+		}
+		n = a;
+	}
+	
+	//Change this for more than two digits
+	string tempString = null;
+	if((((int)n[counter] > 57) && ((int)n[counter] < 48)){		//checks if there is only numbers in the string
+		for (int counter = 0; counter<n.length(); counter++){
+			if (n[counter] == n[n.length-1]){			
+				return n;										//returns the string if there is only numbers
+			}
+		}
+	}
+	
+	for (int i = 0; i < n.length(); i++){				//find left + right
+			if (n[i] == '('){							//checks for right brackets
+				bracketCount++;							//adds to counter if there is one
+			}
+			if (n[i] == ')'){							//checks for right brackets
+				bracketCount--;							//subtracts one from counter if there is one
+			}
+			if ((bracketCount==0) && (n[i] == '+')){	//checks for add symbol to split
+				for(int j = 0; j <  i; j++){
+					left[j] = n[j];						//creates left string
+				}
+				for(int k = (i+1); i < n.length(); k++){
+					right[k-i+1] = n[k];				//creates right string
+				}
+				Addition result = Addition(Expression(left)).evaluate(), (Expression(right)).evaluate());	//calls Addition class
+			}
+			if ((bracketCount==0) && (n[i] == '-')){	//checks for subtract symbol to split
+				for(int j = 0; j <  i; j++){
+					left[j] = n[j];						//creates left string
+				}
+				for(int k = (i+1); i < n.length(); k++){
+					right[k-i+1] = n[k];				//creates right string
+				}
+				Subtraction result = Subtraction(Expression(left)).evaluate(), (Expression(right)).evaluate());;	//calls subtraction class
+			}
+			if((bracketCount==0) && (n[i] == '*')){		//checks for multiplication to split
+				for(int j = 0; j <  i; j++){
+					left[j] = n[j];						//creates left string
+				}
+				for(int k = (i+1); i < n.length(); k++){
+					right[k-i+1] = n[k];				//creates right string
+				}
+				Expression L(left);
+				Multiplication result = Multiplication(Expression(left)).evaluate(), (Expression(right)).evaluate()); //calls multiplication class
+			}
+			if((bracketCount==0) && (n[i] == '/')){		//checks for division to split
+				for(int j = 0; j <  i; j++){
+					left[j] = n[j];						//creates left string
+				}
+				for(int k = (i+1); i < n.length(); k++){
+					right[k-i+1] = n[k];				//creates right string
+				}
+				Multiplication result = Division(Expression(left)).evaluate(), (Expression(right)).evaluate());; 	//calls division class
+			}
+			}
+			return result;								//returns result after all recursion
+				
+	}
+	void print(){
+		//check expression.print()
+	}
+	float convert(string s){							//converts string to integer
+		istringstream buffer(s);
+		int num;
+		buffer >> num;
+		return num;
+	}
+}
+}
+
+class Addition: public ArithmeticExpression{
+private:
+	string l;											//holds left char
+	string r;											//holds right char
+	int x = l.convert();								//holds left char as int
+	int y = r.convert();								//holds right char as int
+	int result;											//holds result as int
+	string resultS;										//holds result as string
+public:
+	//Constructor
+	Addition(Expression left, Expression right){
+		l = left.evaluate();
+		r = right.evaluate();
+	}
+	string evaluate(){									//adds the left and right
+		result = x+y;									//first as integers
+		resultS = to_string(result);					//converts int to string
+		return resultS;									//returns result as a string
+	}
+	void print(){
+		cout << "(" << x << "+" << y << ")" << endl		//prints out (x+y)
+	}
+}
