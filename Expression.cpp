@@ -6,8 +6,16 @@
  */
 
 #include "Expression.h"
+#include <string>
+using namespace std;
 
 Expression::Expression() {
+	class Expression {
+		virtual string evaluate(string n){
+			return "hello";
+		}
+		virtual void print();
+		};
 
 }
 

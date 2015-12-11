@@ -12,10 +12,15 @@
 #include <iomanip>
 using namespace std;
 
+
+
 int main(){
+
 	string n;
 	while(n!="#"){
+		Expression e;
 		cout << "Please enter an expression: ";
+		cin >> n;
 		int leftBracket=0;
 		int rightBracket=0;
 		for(int i = 0; i < n.length(); i++){
@@ -30,6 +35,9 @@ int main(){
 		if(leftBracket!=rightBracket){
 			cout << "Expression is not well formed\n";
 			continue;
+		}
+		else{
+			e.evaluate(n);
 		}
 
 	}

@@ -5,13 +5,14 @@
  *      Author: graeme
  */
 #include <string>
+using namespace std;
 
 #ifndef EXPRESSION_H_
 #define EXPRESSION_H_e
 
 class Expression {
-	virtual std::string evaluate();
-	virtual void ~print();
+	virtual string evaluate(string n);
+	virtual void print();
 	};
 
 #endif /* EXPRESSION_H_ */

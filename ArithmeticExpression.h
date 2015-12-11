@@ -1,16 +1,18 @@
 /*
- * ArithmeticExpression.h
  *
+ * ArithmeticExpression.hstd::
  *  Created on: Nov 29, 2015
  *      Author: graeme
  */
 
 #include <string>
+#include <iomanip>
+using namespace std;
 
 class ArithmeticExpression : public Expression{
 	Expression *left;
 	Expression *right;
-	std::string evaluate (){ //evaluate left expression and right expression
+	string evaluate (string){ //evaluate left expression and right expression
 	void print(); // prints expression
 	return "string";
 	}

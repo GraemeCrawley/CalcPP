@@ -6,13 +6,10 @@
  */
 
 #include "ArithmeticExpression.h"
+#include <string>
+#include <iomanip>
+using namespace std;
 
 ArithmeticExpression::ArithmeticExpression() {
-	// TODO Auto-generated constructor stub
 
 }
-
-ArithmeticExpression::~ArithmeticExpression() {
-	// TODO Auto-generated destructor stub
-}
-
