@@ -11,12 +11,23 @@ using namespace std;
 
 Expression::Expression() {
 	class Expression {
-		virtual string evaluate(string n){
-			return "hello";
-		}
-		virtual void print();
-		};
-
+	private:
+	        string exp;
+	public:
+	        //Constructor
+	        Expression(string s){
+	                exp = s;
+	        }
+	        virtual string evaluate();                                                      //evaluates expr$
+	                //add code to check if its correct
+	                ArithmeticExpression n(exp);                                    //initializes an express$
+	                string result = n.evaluate();                                   //gets result from evalu$
+	                return result;
+	        virtual void print(){
+	                //convert expression into simplified version
+	                //i.e. no extra brackets or spaces
+	        }
+	}
 }
 
 
