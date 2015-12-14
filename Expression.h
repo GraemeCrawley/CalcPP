@@ -6,11 +6,13 @@
  *      Author: graeme
  */
 
+#ifndef EXPRESSION_H_
+#define EXPRESSION_H_
+
 #include <string>
 using namespace std;
 
-#ifndef EXPRESSION_H_
-#define EXPRESSION_H_e
+
 
 class Expression{
 private:

@@ -23,7 +23,7 @@ public:
 	void print(); // prints expression
 	return "string";
 	}
-	float convert (std::string s){ // Converts a string (as would be returned by evaluate) to a float
+	float convert (string s){ // Converts a string (as would be returned by evaluate) to a float
 	}
 };
 

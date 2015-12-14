@@ -71,13 +71,13 @@ int main(){
 				}
 		}
 		if(brackets!=0){											//If there's not an equal number of brackets
-			cout << "Expression is not well formed\n";				//print "Expression not well formed"
+			cout << "Expression is not well formed";				//print "Expression not well formed"
 			continue;												//continue to next loop
 		}
 		//If everything is good, evaluate the expression
 		else{														//If no errors in the input
 			cout<<endl;
-			ArithmeticExpression exp = exp(n);
+			ArithmeticExpression exp = exp(k);
 			exp.evaluate();
 		}
 

@@ -58,54 +58,56 @@ ArithmeticExpression::ArithmeticExpression() {
 					}
 					ArithmeticExpression L = L(left);
 					ArithmeticExpression R = R(right);
-					Addition result = Addition(L.evaluate(),(R.evaluate()));	//calls Addition class
+					Addition result = Addition(L.evaluate(), (R.evaluate()));//calls Addition class
+					return result;					//returns result after all recursion
+				}
+				if ((bracketCount == 0) && (n[i] == '-')) {	//checks for subtract symbol to split
+					for (int j = 0; j < i; j++) {
+						left[j] = n[j];					//creates left string
+					}
+					for (int k = (i + 1); i < n.length(); k++) {
+						right[k - i + 1] = n[k];		//creates right string
+					}
+					ArithmeticExpression L = L(left);
+					ArithmeticExpression R = R(right);
+					Subtract result = Subtract(L.evaluate(), (R.evaluate()));//calls subtraction class
+					return result;					//returns result after all recursion
+				}
+				if ((bracketCount == 0) && (n[i] == '*')) {	//checks for multiplication to split
+					for (int j = 0; j < i; j++) {
+						left[j] = n[j];					//creates left string
+					}
+					for (int k = (i + 1); i < n.length(); k++) {
+						right[k - i + 1] = n[k];		//creates right string
+					}
+					ArithmeticExpression L = L(left);
+					ArithmeticExpression R = R(right);
+					Multiply result = Multiply(L.evaluate(), (R.evaluate())); //calls multiplication class
+					return result;					//returns result after all recursion
+				}
+				if ((bracketCount == 0) && (n[i] == '/')) {	//checks for division to split
+					for (int j = 0; j < i; j++) {
+						left[j] = n[j];					//creates left string
+					}
+					for (int k = (i + 1); i < n.length(); k++) {
+						right[k - i + 1] = n[k];		//creates right string
+					}
+					ArithmeticExpression L = L(left);
+					ArithmeticExpression R = R(right);
+					Divide result = Divide(L.evaluate(), (R.evaluate())); //calls division class
+					return result;					//returns result after all recursion
+				}
 			}
-			if ((bracketCount == 0) && (n[i] == '-')) {	//checks for subtract symbol to split
-				for (int j = 0; j < i; j++) {
-					left[j] = n[j];						//creates left string
-				}
-				for (int k = (i + 1); i < n.length(); k++) {
-					right[k - i + 1] = n[k];			//creates right string
-				}
-				Subtraction result = Subtraction(Expression(left)).evaluate(),(Expression(right)).evaluate());	//calls subtraction class
-			}
-			if ((bracketCount == 0) && (n[i] == '*')) {	//checks for multiplication to split
-				for (int j = 0; j < i; j++) {
-					left[j] = n[j];						//creates left string
-				}
-				for (int k = (i + 1); i < n.length(); k++) {
-					right[k - i + 1] = n[k];			//creates right string
-				}
-				Expression L(left);
-				Multiplication result =
-						Multiplication(Expression(left)).evaluate(),
-						(Expression(right))
-			.evaluate()); //calls multiplication class
 		}
-		if ((bracketCount == 0) && (n[i] == '/')) {	//checks for division to split
-			for (int j = 0; j < i; j++) {
-				left[j] = n[j];						//creates left string
-			}
-			for (int k = (i + 1); i < n.length(); k++) {
-				right[k - i + 1] = n[k];				//creates right string
-			}
-			Multiplication result = Division(Expression(left)).evaluate(),
-					(Expression(right))
-			.evaluate());; 	//calls division class
+		void print() {
+				//check expression.print()
 		}
-	}
-	return result;							//returns result after all recursion
-
-}
-void print() {
-//check expression.print()
-}
-float convert(string s) {							//converts string to integer
-	istringstream buffer(s);
-	int num;
-	buffer >> num;
-	return num;
-}
+		float convert(string s) {					//converts string to integer
+			istringstream buffer(s);
+			int num;
+			buffer >> num;
+			return num;
+		}
 	}
 }
 }

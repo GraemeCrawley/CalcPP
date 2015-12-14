@@ -15,9 +15,7 @@ Expression::Expression() {
 	        string exp;
 	public:
 	        //Constructor
-	        Expression(string s){
-	                exp = s;
-	        }
+
 	        virtual string evaluate();                                                      //evaluates expr$
 	                //add code to check if its correct
 	                ArithmeticExpression n(exp);                                    //initializes an express$
@@ -27,7 +25,7 @@ Expression::Expression() {
 	                //convert expression into simplified version
 	                //i.e. no extra brackets or spaces
 	        }
-	}
+	};
 }
 
 
